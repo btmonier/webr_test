@@ -1,0 +1,100 @@
+---
+title: "Buckler Lab Updates"
+author: "Brandon Monier"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+date-format: "YYYY-MM-DD"
+format: revealjs
+embed-resources: false
+filters:
+  - webr
+---
+
+<!-- ```{css echo=FALSE, include=FALSE} -->
+<!-- .med-code{ -->
+<!--   font-size: 85% -->
+<!-- } -->
+<!-- .tiny-code{ -->
+<!--   font-size: 75%   -->
+<!-- } -->
+<!-- ``` -->
+
+```{r, echo=FALSE, include=FALSE}
+Sys.Date()
+```
+
+## Teaching Duties
+
+-   eCornell
+
+## PHGv2 - documentation
+
+![](img/phgv2_schema.png)
+
+## PHGv2 - documentation - alignment
+
+``` shell
+./phg align-assemblies \
+    --gff anchors.gff \
+    --reference-file Ref.fa \
+    -a assembliesList.txt \
+    --total-threads 6 \
+    --in-parallel 3 \
+    -o /path/for/generatedFiles
+```
+
+## PHGv2 - documentation - alignment
+
+``` shell
+./phg align-assemblies \
+    --gff anchors.gff \
+    --reference-file Ref.fa \
+    -a assembliesList.txt \
+    --total-threads 6 \   # <-- how to explain further?
+    --in-parallel 3 \     # <-- how to explain further?
+    -o /path/for/generatedFiles
+```
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_01.png){fig-align="center" width="483"}
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_02.png){fig-align="center" width="483"}
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_03.png){fig-align="center" width="482"}
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_04.png){fig-align="center" width="482"}
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_05.png){fig-align="center" width="482"}
+
+## PHGv2 - documentation - alignment
+
+![](img/align_thread_06.png){fig-align="center" width="482"}
+
+
+## `webR` Test
+
+```{webr-r}
+1 + 1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
