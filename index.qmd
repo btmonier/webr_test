@@ -10,12 +10,19 @@ filters:
 ---
 
 <!-- ```{css echo=FALSE, include=FALSE} -->
+
 <!-- .med-code{ -->
+
 <!--   font-size: 85% -->
+
 <!-- } -->
+
 <!-- .tiny-code{ -->
+
 <!--   font-size: 75%   -->
+
 <!-- } -->
+
 <!-- ``` -->
 
 ```{r, echo=FALSE, include=FALSE}
@@ -78,23 +85,8 @@ Sys.Date()
 
 ![](img/align_thread_06.png){fig-align="center" width="482"}
 
-
 ## `webR` Test
 
 ```{webr-r}
 1 + 1
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
