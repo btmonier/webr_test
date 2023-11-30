@@ -1,37 +1,28 @@
 ---
 title: "Buckler Lab Updates"
 author: "Brandon Monier"
-date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+date: "2023-11-30"
 date-format: "YYYY-MM-DD"
-format: revealjs
+format:
+  revealjs:
+    auto-stretch: false
+    scrollable: true
 embed-resources: false
+webr:
+  packages: ['ggplot2', 'dplyr']
 filters:
   - webr
 ---
 
-<!-- ```{css echo=FALSE, include=FALSE} -->
-
-<!-- .med-code{ -->
-
-<!--   font-size: 85% -->
-
-<!-- } -->
-
-<!-- .tiny-code{ -->
-
-<!--   font-size: 75%   -->
-
-<!-- } -->
-
-<!-- ``` -->
-
-```{r, echo=FALSE, include=FALSE}
-Sys.Date()
-```
-
 ## Teaching Duties
 
--   eCornell
+-   eCornell training modules
+    -   Bethany (Jupyter Notebooks)
+    -   Me (Genomic analyses via TASSEL/rTASSEL + interop)
+    -   Kelly Robbins (mixed model analyses)
+-   Professionally recorded!
+    -   *So many scripts...*
+    -   Practice runs - next Friday (2023-12-08)
 
 ## PHGv2 - documentation
 
@@ -56,8 +47,8 @@ Sys.Date()
     --gff anchors.gff \
     --reference-file Ref.fa \
     -a assembliesList.txt \
-    --total-threads 6 \   # <-- how to explain further?
-    --in-parallel 3 \     # <-- how to explain further?
+    --total-threads 6 \          # <-- how to explain further?
+    --in-parallel 3 \            # <---/
     -o /path/for/generatedFiles
 ```
 
@@ -85,8 +76,43 @@ Sys.Date()
 
 ![](img/align_thread_06.png){fig-align="center" width="482"}
 
-## `webR` Test
+
+## R `<>` WebAssembly (WASM)
+
+* WebAssembly
+  + Write applications for the web other than JavaScript
+  + No installation
+  + Near-native performance
+* `webR`
+  + R distribution compiled to WASM that runs ***completely in the browser***
+  + No need to install R or setup a server running R
+
+
+## `webR` 
 
 ```{webr-r}
-1 + 1
+fit = lm(mpg ~ wt, data = mtcars)
+
+summary(fit)
 ```
+
+
+## Libraries in `webR`
+
+```{webr-r}
+mpg |>
+    ggplot() +
+    aes(x = displ, y = hwy, color = class) +
+    geom_point()
+```
+
+
+
+
+
+
+
+
+
+
+
